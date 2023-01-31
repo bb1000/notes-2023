@@ -1,6 +1,7 @@
 title: BB1000 notes 2023
 author: Olav Vahtras
 logo: logo.jpg
+copyright: 2023
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
