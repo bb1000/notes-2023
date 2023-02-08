@@ -1,0 +1,1263 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Notes 2023-02-08 &#8212; BB1000 notes 2023</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Notes 2023-02-03" href="notes-2023-02-03.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">BB1000 notes 2023</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Notes 2023
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2013-01-18.html">
+   Notes 2013-01-18
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2013-01-23.html">
+   Notes 2013-01-23
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-01-26.html">
+   Notes 2023-01-26
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-01-31.html">
+   Notes 2023-01-31
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-03.html">
+   Notes 2023-02-03
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Notes 2023-02-08
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/bb1000/notes-2023/master?urlpath=tree/notes-2023-02-08.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bb1000/notes-2023"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bb1000/notes-2023/issues/new?title=Issue%20on%20page%20%2Fnotes-2023-02-08.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notes-2023-02-08.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navigating-in-a-file-system">
+   Navigating in a file system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#files-in-python">
+   Files in python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-csv-files-with-historical-data">
+   Example: csv files with historical data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Notes 2023-02-08</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navigating-in-a-file-system">
+   Navigating in a file system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#files-in-python">
+   Files in python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-csv-files-with-historical-data">
+   Example: csv files with historical data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="notes-2023-02-08">
+<h1>Notes 2023-02-08<a class="headerlink" href="#notes-2023-02-08" title="Permalink to this headline">#</a></h1>
+<section id="navigating-in-a-file-system">
+<h2>Navigating in a file system<a class="headerlink" href="#navigating-in-a-file-system" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># where am i?</span>
+<span class="o">!</span>pwd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/bb1000/notes-2023
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># what files do we have here</span>
+<span class="o">!</span>ls
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>add.png				  menu1.png
+_build				  menu2.png
+_config.yml			  notes-2013-01-18.ipynb
+conflicts.png			  notes-2013-01-23.ipynb
+data.txt			  notes-2023-01-26.ipynb
+HistoricalData_1675853088207.csv  notes-2023-01-31.ipynb
+intro.md			  notes-2023-02-03.ipynb
+keys.png			  notes-2023-02-08.ipynb
+logo.jpg			  resolve.png
+Makefile			  _toc.yml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list file in long format</span>
+<span class="o">!</span>ls -l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 492
+-rw-rw-r-- 1 bb1000 bb1000  29400 jan 26 16:35 add.png
+drwxrwxr-x 5 bb1000 bb1000   4096 jan 31 10:34 _build
+-rw-rw-r-- 1 bb1000 bb1000    633 jan 31 11:31 _config.yml
+-rw-rw-r-- 1 bb1000 bb1000  29032 jan 26 16:55 conflicts.png
+-rw-rw-r-- 1 bb1000 bb1000     13 feb  8 13:43 data.txt
+-rw-rw-r-- 1 bb1000 bb1000 137867 feb  8 11:44 HistoricalData_1675853088207.csv
+-rw-rw-r-- 1 bb1000 bb1000     40 jan 31 11:01 intro.md
+-rw-rw-r-- 1 bb1000 bb1000  15521 jan 26 16:34 keys.png
+-rw-rw-r-- 1 bb1000 bb1000  60911 sep 16 17:08 logo.jpg
+-rw-rw-r-- 1 bb1000 bb1000     61 jan 31 11:14 Makefile
+-rw-rw-r-- 1 bb1000 bb1000  23030 jan 26 16:32 menu1.png
+-rw-rw-r-- 1 bb1000 bb1000  33062 jan 26 16:33 menu2.png
+-rw-rw-r-- 1 bb1000 bb1000  28776 jan 31 11:29 notes-2013-01-18.ipynb
+-rw-rw-r-- 1 bb1000 bb1000   5601 jan 31 11:13 notes-2013-01-23.ipynb
+-rw-rw-r-- 1 bb1000 bb1000   4425 jan 31 11:13 notes-2023-01-26.ipynb
+-rw-rw-r-- 1 bb1000 bb1000   8831 jan 31 11:13 notes-2023-01-31.ipynb
+-rw-rw-r-- 1 bb1000 bb1000   9532 feb  8 08:52 notes-2023-02-03.ipynb
+-rw-rw-r-- 1 bb1000 bb1000  33145 feb  8 13:46 notes-2023-02-08.ipynb
+-rw-rw-r-- 1 bb1000 bb1000  21984 jan 26 17:03 resolve.png
+-rw-rw-r-- 1 bb1000 bb1000    316 feb  8 08:51 _toc.yml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list file in long format sorted by date</span>
+<span class="o">!</span>ls -lt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 492
+-rw-rw-r-- 1 bb1000 bb1000  33145 feb  8 13:46 notes-2023-02-08.ipynb
+-rw-rw-r-- 1 bb1000 bb1000     13 feb  8 13:43 data.txt
+-rw-rw-r-- 1 bb1000 bb1000 137867 feb  8 11:44 HistoricalData_1675853088207.csv
+-rw-rw-r-- 1 bb1000 bb1000   9532 feb  8 08:52 notes-2023-02-03.ipynb
+-rw-rw-r-- 1 bb1000 bb1000    316 feb  8 08:51 _toc.yml
+-rw-rw-r-- 1 bb1000 bb1000    633 jan 31 11:31 _config.yml
+-rw-rw-r-- 1 bb1000 bb1000  28776 jan 31 11:29 notes-2013-01-18.ipynb
+-rw-rw-r-- 1 bb1000 bb1000     61 jan 31 11:14 Makefile
+-rw-rw-r-- 1 bb1000 bb1000   5601 jan 31 11:13 notes-2013-01-23.ipynb
+-rw-rw-r-- 1 bb1000 bb1000   4425 jan 31 11:13 notes-2023-01-26.ipynb
+-rw-rw-r-- 1 bb1000 bb1000   8831 jan 31 11:13 notes-2023-01-31.ipynb
+-rw-rw-r-- 1 bb1000 bb1000     40 jan 31 11:01 intro.md
+drwxrwxr-x 5 bb1000 bb1000   4096 jan 31 10:34 _build
+-rw-rw-r-- 1 bb1000 bb1000  21984 jan 26 17:03 resolve.png
+-rw-rw-r-- 1 bb1000 bb1000  29032 jan 26 16:55 conflicts.png
+-rw-rw-r-- 1 bb1000 bb1000  29400 jan 26 16:35 add.png
+-rw-rw-r-- 1 bb1000 bb1000  15521 jan 26 16:34 keys.png
+-rw-rw-r-- 1 bb1000 bb1000  33062 jan 26 16:33 menu2.png
+-rw-rw-r-- 1 bb1000 bb1000  23030 jan 26 16:32 menu1.png
+-rw-rw-r-- 1 bb1000 bb1000  60911 sep 16 17:08 logo.jpg
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print my home folder</span>
+<span class="o">!</span><span class="nb">echo</span> ~
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/bb1000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># output data to file</span>
+<span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;Hello&quot;</span> &gt; data.txt #overwrite
+<span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;world!&quot;</span> &gt;&gt; data.txt #append
+<span class="o">!</span>cat data.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+world!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="files-in-python">
+<h2>Files in python<a class="headerlink" href="#files-in-python" title="Permalink to this headline">#</a></h2>
+<p>The open statement opens/creates a file for reading/writing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">open</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function open in module io:
+
+open(file, mode=&#39;r&#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+    Open file and return a stream.  Raise OSError upon failure.
+    
+    file is either a text or byte string giving the name (and the path
+    if the file isn&#39;t in the current working directory) of the file to
+    be opened or an integer file descriptor of the file to be
+    wrapped. (If a file descriptor is given, it is closed when the
+    returned I/O object is closed, unless closefd is set to False.)
+    
+    mode is an optional string that specifies the mode in which the file
+    is opened. It defaults to &#39;r&#39; which means open for reading in text
+    mode.  Other common values are &#39;w&#39; for writing (truncating the file if
+    it already exists), &#39;x&#39; for creating and writing to a new file, and
+    &#39;a&#39; for appending (which on some Unix systems, means that all writes
+    append to the end of the file regardless of the current seek position).
+    In text mode, if encoding is not specified the encoding used is platform
+    dependent: locale.getpreferredencoding(False) is called to get the
+    current locale encoding. (For reading and writing raw bytes use binary
+    mode and leave encoding unspecified.) The available modes are:
+    
+    ========= ===============================================================
+    Character Meaning
+    --------- ---------------------------------------------------------------
+    &#39;r&#39;       open for reading (default)
+    &#39;w&#39;       open for writing, truncating the file first
+    &#39;x&#39;       create a new file and open it for writing
+    &#39;a&#39;       open for writing, appending to the end of the file if it exists
+    &#39;b&#39;       binary mode
+    &#39;t&#39;       text mode (default)
+    &#39;+&#39;       open a disk file for updating (reading and writing)
+    &#39;U&#39;       universal newline mode (deprecated)
+    ========= ===============================================================
+    
+    The default mode is &#39;rt&#39; (open for reading text). For binary random
+    access, the mode &#39;w+b&#39; opens and truncates the file to 0 bytes, while
+    &#39;r+b&#39; opens the file without truncation. The &#39;x&#39; mode implies &#39;w&#39; and
+    raises an `FileExistsError` if the file already exists.
+    
+    Python distinguishes between files opened in binary and text modes,
+    even when the underlying operating system doesn&#39;t. Files opened in
+    binary mode (appending &#39;b&#39; to the mode argument) return contents as
+    bytes objects without any decoding. In text mode (the default, or when
+    &#39;t&#39; is appended to the mode argument), the contents of the file are
+    returned as strings, the bytes having been first decoded using a
+    platform-dependent encoding or using the specified encoding if given.
+    
+    &#39;U&#39; mode is deprecated and will raise an exception in future versions
+    of Python.  It has no effect in Python 3.  Use newline to control
+    universal newlines mode.
+    
+    buffering is an optional integer used to set the buffering policy.
+    Pass 0 to switch buffering off (only allowed in binary mode), 1 to select
+    line buffering (only usable in text mode), and an integer &gt; 1 to indicate
+    the size of a fixed-size chunk buffer.  When no buffering argument is
+    given, the default buffering policy works as follows:
+    
+    * Binary files are buffered in fixed-size chunks; the size of the buffer
+      is chosen using a heuristic trying to determine the underlying device&#39;s
+      &quot;block size&quot; and falling back on `io.DEFAULT_BUFFER_SIZE`.
+      On many systems, the buffer will typically be 4096 or 8192 bytes long.
+    
+    * &quot;Interactive&quot; text files (files for which isatty() returns True)
+      use line buffering.  Other text files use the policy described above
+      for binary files.
+    
+    encoding is the name of the encoding used to decode or encode the
+    file. This should only be used in text mode. The default encoding is
+    platform dependent, but any encoding supported by Python can be
+    passed.  See the codecs module for the list of supported encodings.
+    
+    errors is an optional string that specifies how encoding errors are to
+    be handled---this argument should not be used in binary mode. Pass
+    &#39;strict&#39; to raise a ValueError exception if there is an encoding error
+    (the default of None has the same effect), or pass &#39;ignore&#39; to ignore
+    errors. (Note that ignoring encoding errors can lead to data loss.)
+    See the documentation for codecs.register or run &#39;help(codecs.Codec)&#39;
+    for a list of the permitted encoding error strings.
+    
+    newline controls how universal newlines works (it only applies to text
+    mode). It can be None, &#39;&#39;, &#39;\n&#39;, &#39;\r&#39;, and &#39;\r\n&#39;.  It works as
+    follows:
+    
+    * On input, if newline is None, universal newlines mode is
+      enabled. Lines in the input can end in &#39;\n&#39;, &#39;\r&#39;, or &#39;\r\n&#39;, and
+      these are translated into &#39;\n&#39; before being returned to the
+      caller. If it is &#39;&#39;, universal newline mode is enabled, but line
+      endings are returned to the caller untranslated. If it has any of
+      the other legal values, input lines are only terminated by the given
+      string, and the line ending is returned to the caller untranslated.
+    
+    * On output, if newline is None, any &#39;\n&#39; characters written are
+      translated to the system default line separator, os.linesep. If
+      newline is &#39;&#39; or &#39;\n&#39;, no translation takes place. If newline is any
+      of the other legal values, any &#39;\n&#39; characters written are translated
+      to the given string.
+    
+    If closefd is False, the underlying file descriptor will be kept open
+    when the file is closed. This does not work when a file name is given
+    and must be True in that case.
+    
+    A custom opener can be used by passing a callable as *opener*. The
+    underlying file descriptor for the file object is then obtained by
+    calling *opener* with (*file*, *flags*). *opener* must return an open
+    file descriptor (passing os.open as *opener* results in functionality
+    similar to passing None).
+    
+    open() returns a file object whose type depends on the mode, and
+    through which the standard file operations such as reading and writing
+    are performed. When open() is used to open a file in a text mode (&#39;w&#39;,
+    &#39;r&#39;, &#39;wt&#39;, &#39;rt&#39;, etc.), it returns a TextIOWrapper. When used to open
+    a file in a binary mode, the returned class varies: in read binary
+    mode, it returns a BufferedReader; in write binary and append binary
+    modes, it returns a BufferedWriter, and in read/write mode, it returns
+    a BufferedRandom.
+    
+    It is also possible to use a string or bytearray as a file for both
+    reading and writing. For strings StringIO can be used like a file
+    opened in a text mode, and for bytes a BytesIO can be used like a file
+    opened in a binary mode.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">()</span> <span class="c1"># one filename argument is required (str)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">open</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: open() missing 1 required positional argument: &#39;file&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.10/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;data.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="c1"># open for writing/creates if not existing, overwrites if existing</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>afile<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">afile</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;_CHUNK_SIZE&#39;,
+ &#39;__class__&#39;,
+ &#39;__del__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__enter__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__exit__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__next__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;_checkClosed&#39;,
+ &#39;_checkReadable&#39;,
+ &#39;_checkSeekable&#39;,
+ &#39;_checkWritable&#39;,
+ &#39;_finalizing&#39;,
+ &#39;buffer&#39;,
+ &#39;close&#39;,
+ &#39;closed&#39;,
+ &#39;detach&#39;,
+ &#39;encoding&#39;,
+ &#39;errors&#39;,
+ &#39;fileno&#39;,
+ &#39;flush&#39;,
+ &#39;isatty&#39;,
+ &#39;line_buffering&#39;,
+ &#39;mode&#39;,
+ &#39;name&#39;,
+ &#39;newlines&#39;,
+ &#39;read&#39;,
+ &#39;readable&#39;,
+ &#39;readline&#39;,
+ &#39;readlines&#39;,
+ &#39;reconfigure&#39;,
+ &#39;seek&#39;,
+ &#39;seekable&#39;,
+ &#39;tell&#39;,
+ &#39;truncate&#39;,
+ &#39;writable&#39;,
+ &#39;write&#39;,
+ &#39;write_through&#39;,
+ &#39;writelines&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="n">afile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat data.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1"># data that has been written are not saved until file is closed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat data.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>helloworld
+</pre></div>
+</div>
+</div>
+</div>
+<p>Common form of open, a so called context manager will close the file automatically</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">afile</span><span class="p">:</span> <span class="c1"># a for append</span>
+    <span class="n">afile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">afile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;have a nice day</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat data.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>helloworld
+have a nice day
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1"># read the file to a single string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;helloworld\nhave a nice day\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">)</span>
+<span class="n">afile</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span> <span class="c1">#read a list of lines</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;helloworld\n&#39;, &#39;have a nice day\n&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>helloworld
+have a nice day
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># optionally use print to write to a file</span>
+<span class="n">afile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">afile</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">afile</span><span class="p">)</span>
+<span class="n">afile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat data.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+world
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-csv-files-with-historical-data">
+<h2>Example: csv files with historical data<a class="headerlink" href="#example-csv-files-with-historical-data" title="Permalink to this headline">#</a></h2>
+<p>Download from <a class="reference external" href="https://www.nasdaq.com/market-activity/stocks/amzn/historical">https://www.nasdaq.com/market-activity/stocks/amzn/historical</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls -l HistoricalData_1675853088207.csv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-rw-r-- 1 bb1000 bb1000 137867 feb  8 11:44 HistoricalData_1675853088207.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head HistoricalData_1675853088207.csv # the first <span class="m">10</span> lines
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date,Close/Last,Volume,Open,High,Low
+
+02/07/2023,$102.11,119501300,$101.17,$102.41,$98.08
+
+02/06/2023,$102.18,81945200,$102.925,$103.9484,$100.65
+
+02/03/2023,$103.39,144374800,$105.26,$108.78,$102.52
+
+02/02/2023,$112.91,158154200,$110.245,$114,$108.88
+
+02/01/2023,$105.15,80450120,$102.53,$106.24,$101.24
+
+01/31/2023,$103.13,66527250,$101.155,$103.3484,$101.14
+
+01/30/2023,$100.55,70691860,$101.09,$101.74,$99.01
+
+01/27/2023,$102.24,87775610,$99.53,$103.485,$99.53
+
+01/26/2023,$99.22,68523560,$98.235,$99.49,$96.92
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>tail HistoricalData_1675853088207.csv # the last <span class="m">10</span> lines
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>02/22/2013,$13.271,62456040,$13.331,$13.3555,$13.0805
+
+02/21/2013,$13.297,72675940,$13.256,$13.474,$13.1625
+
+02/20/2013,$13.3205,70577240,$13.51,$13.715,$13.3186
+
+02/19/2013,$13.4875,57065040,$13.2955,$13.5055,$13.225
+
+02/15/2013,$13.2545,79592640,$13.3815,$13.446,$13.1555
+
+02/14/2013,$13.462,69237600,$13.3685,$13.5325,$13.27
+
+02/13/2013,$13.4735,105804040,$13.0765,$13.498,$13.015
+
+02/12/2013,$12.935,58630880,$12.9595,$13.008,$12.85
+
+02/11/2013,$12.8605,68029860,$13.16,$13.1625,$12.83
+
+02/08/2013,$13.0975,77581560,$13.07,$13.2625,$13.0278
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;HistoricalData_1675853088207.csv&#39;</span><span class="p">):</span>   <span class="c1">#as looping over any text files</span>
+    <span class="c1"># print(line)</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Date,Close/Last,Volume,Open,High,Low
+
+02/07/2023,$102.11,119501300,$101.17,$102.41,$98.08
+
+02/06/2023,$102.18,81945200,$102.925,$103.9484,$100.65
+
+02/03/2023,$103.39,144374800,$105.26,$108.78,$102.52
+...
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span> <span class="c1">#library specialized for csv files</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">csv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Dialect&#39;,
+ &#39;DictReader&#39;,
+ &#39;DictWriter&#39;,
+ &#39;Error&#39;,
+ &#39;QUOTE_ALL&#39;,
+ &#39;QUOTE_MINIMAL&#39;,
+ &#39;QUOTE_NONE&#39;,
+ &#39;QUOTE_NONNUMERIC&#39;,
+ &#39;Sniffer&#39;,
+ &#39;StringIO&#39;,
+ &#39;_Dialect&#39;,
+ &#39;__all__&#39;,
+ &#39;__builtins__&#39;,
+ &#39;__cached__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__file__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;__version__&#39;,
+ &#39;excel&#39;,
+ &#39;excel_tab&#39;,
+ &#39;field_size_limit&#39;,
+ &#39;get_dialect&#39;,
+ &#39;list_dialects&#39;,
+ &#39;re&#39;,
+ &#39;reader&#39;,
+ &#39;register_dialect&#39;,
+ &#39;unix_dialect&#39;,
+ &#39;unregister_dialect&#39;,
+ &#39;writer&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function reader in module _csv:
+
+reader(...)
+    csv_reader = reader(iterable [, dialect=&#39;excel&#39;]
+                            [optional keyword args])
+        for row in csv_reader:
+            process(row)
+    
+    The &quot;iterable&quot; argument can be any object that returns a line
+    of input for each iteration, such as a file object or a list.  The
+    optional &quot;dialect&quot; parameter is discussed below.  The function
+    also accepts optional keyword arguments which override settings
+    provided by the dialect.
+    
+    The returned object is an iterator.  Each iteration returns a row
+    of the CSV file (which can span multiple input lines).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;HistoricalData_1675853088207.csv&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>  
+    <span class="c1"># print(row)  # each line a list of values, separating lines on commas</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;Date&#39;, &#39;Close/Last&#39;, &#39;Volume&#39;, &#39;Open&#39;, &#39;High&#39;, &#39;Low&#39;]
+[&#39;02/07/2023&#39;, &#39;$102.11&#39;, &#39;119501300&#39;, &#39;$101.17&#39;, &#39;$102.41&#39;, &#39;$98.08&#39;]
+[&#39;02/06/2023&#39;, &#39;$102.18&#39;, &#39;81945200&#39;, &#39;$102.925&#39;, &#39;$103.9484&#39;, &#39;$100.65&#39;]
+[&#39;02/03/2023&#39;, &#39;$103.39&#39;, &#39;144374800&#39;, &#39;$105.26&#39;, &#39;$108.78&#39;, &#39;$102.52&#39;]
+...
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;HistoricalData_1675853088207.csv&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>  
+    <span class="c1"># print(row)  # each line a dictionary of values, keys from column headers</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;Date&#39;: &#39;02/07/2023&#39;, &#39;Close/Last&#39;: &#39;$102.11&#39;, &#39;Volume&#39;: &#39;119501300&#39;, &#39;Open&#39;: &#39;$101.17&#39;, &#39;High&#39;: &#39;$102.41&#39;, &#39;Low&#39;: &#39;$98.08&#39;}
+{&#39;Date&#39;: &#39;02/06/2023&#39;, &#39;Close/Last&#39;: &#39;$102.18&#39;, &#39;Volume&#39;: &#39;81945200&#39;, &#39;Open&#39;: &#39;$102.925&#39;, &#39;High&#39;: &#39;$103.9484&#39;, &#39;Low&#39;: &#39;$100.65&#39;}
+{&#39;Date&#39;: &#39;02/03/2023&#39;, &#39;Close/Last&#39;: &#39;$103.39&#39;, &#39;Volume&#39;: &#39;144374800&#39;, &#39;Open&#39;: &#39;$105.26&#39;, &#39;High&#39;: &#39;$108.78&#39;, &#39;Low&#39;: &#39;$102.52&#39;}
+{&#39;Date&#39;: &#39;02/02/2023&#39;, &#39;Close/Last&#39;: &#39;$112.91&#39;, &#39;Volume&#39;: &#39;158154200&#39;, &#39;Open&#39;: &#39;$110.245&#39;, &#39;High&#39;: &#39;$114&#39;, &#39;Low&#39;: &#39;$108.88&#39;}
+...
+</pre></div>
+</div>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h3>
+<p>For each trading day in the csv file reserve $1 worth of shares using the closing price. How much will we save?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;HistoricalData_1675853088207.csv&#39;</span><span class="p">))</span>
+<span class="n">shares</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+    <span class="c1"># convert the price data from string to float skipping the initial $ character (using [1:])</span>
+    <span class="n">closing_price_of_day</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Close/Last&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:])</span>  
+    <span class="k">if</span> <span class="n">shares</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">latest_price</span> <span class="o">=</span> <span class="n">closing_price_of_day</span> <span class="c1"># save the latest price from the first iteration</span>
+    <span class="n">shares_purchased</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">closing_price_of_day</span>
+    <span class="n">shares</span> <span class="o">+=</span> <span class="n">shares_purchased</span>
+    <span class="c1"># print(shares_purchased, shares)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0.009793360101850945 0.009793360101850945
+0.009786651008025053 0.019580011109876
+0.009672115291614276 0.029252126401490275
+...
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="n">shares</span> <span class="o">*</span> <span class="n">latest_price</span>
+<span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6736.24
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notes-2023-02-03.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Notes 2023-02-03</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Olav Vahtras<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
