@@ -365,9 +365,7 @@ title="Print to PDF"
 <li><p>some error handling in the script for wrong user input</p></li>
 </ul>
 <p>Result</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %load stocks.py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#stocks.py</span>
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">pathlib</span>
@@ -399,35 +397,6 @@ title="Print to PDF"
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total (</span><span class="si">{</span><span class="n">csv_file</span><span class="si">}</span><span class="s1">) shares=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">shares</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1"> value=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-f does not exist
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">csv_file</span><span class="si">}</span><span class="s1"> does not exist&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">exit</span><span class="p">()</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">csv_file</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">shares</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="c1"># convert the price data from string to float skipping the initial $ character (using [1:])</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.10/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;-f&#39;
-</pre></div>
-</div>
-</div>
-</div>
 <p>Observations</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">sys.argv</span></code> is a list where Python captures command-line arguments</p></li>
@@ -446,12 +415,17 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total (amazon.csv) shares=65.97 value=6736.24
-Total (apple.csv) shares=66.29 value=10070.72
-Total (tesla.csv) shares=137.406 value=27658.42
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total (apple.csv) shares=66.29 value=10070.72
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total (tesla.csv) shares=137.406 value=27658.42
 </pre></div>
 </div>
 </div>
 </div>
+<p>You can download the data from github; <a class="reference external" href="https://github.com/bb1000/notes-2023/blob/master/amazon.csv">amazon.csv</a>, <a class="reference external" href="https://github.com/bb1000/notes-2023/blob/master/apple.csv">apple.csv</a>, and <a class="reference external" href="https://github.com/bb1000/notes-2023/blob/master/tesla.csv">tesla.csv</a></p>
 </section>
 
     <script type="text/x-thebe-config">
