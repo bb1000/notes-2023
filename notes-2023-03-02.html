@@ -362,12 +362,92 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asking-questions-on-data">
+   Asking questions on data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selecting-a-column-series">
+     Selecting a column (series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#as-a-dataframe">
+     as a dataframe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-columns">
+     multiple columns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unique-values">
+     Unique values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sorting-values">
+   Sorting values
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sort-on-elements-in-a-column">
+     Sort on elements in a column
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sorting-on-multiple-columns-in-priority-order">
+     Sorting on multiple columns in priority order
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering">
+   Filtering
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-operations">
+     Logical operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transforming-and-adding-data">
+   Transforming and adding data
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -379,6 +459,75 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asking-questions-on-data">
+   Asking questions on data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selecting-a-column-series">
+     Selecting a column (series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#as-a-dataframe">
+     as a dataframe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-columns">
+     multiple columns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unique-values">
+     Unique values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sorting-values">
+   Sorting values
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sort-on-elements-in-a-column">
+     Sort on elements in a column
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sorting-on-multiple-columns-in-priority-order">
+     Sorting on multiple columns in priority order
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering">
+   Filtering
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-operations">
+     Logical operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transforming-and-adding-data">
+   Transforming and adding data
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -388,6 +537,1882 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="notes-2023-03-02">
 <h1>Notes 2023-03-02<a class="headerlink" href="#notes-2023-03-02" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://docs.google.com/spreadsheets/d/1VVw6O5ncoc2R-bBvu1Xc0PqylA6tKW2pyh5bDHhE_r8&quot;</span>
+<span class="n">dfs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s1">/export?format=xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;person&#39;, &#39;site&#39;, &#39;survey&#39;, &#39;visited&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>personal</th>
+      <th>family</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>dyer</td>
+      <td>William</td>
+      <td>Dyer</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>pb</td>
+      <td>Frank</td>
+      <td>Pabodie</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>lake</td>
+      <td>Anderson</td>
+      <td>Lake</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>roe</td>
+      <td>Valentina</td>
+      <td>Roerich</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>danforth</td>
+      <td>Frank</td>
+      <td>Danforth</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>lat</th>
+      <th>long</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DR-1</td>
+      <td>-49.85</td>
+      <td>-128.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DR-3</td>
+      <td>-47.15</td>
+      <td>-126.72</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MSK-4</td>
+      <td>-48.87</td>
+      <td>-123.40</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>taken</th>
+      <th>person</th>
+      <th>quant</th>
+      <th>reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>9.82</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>7.80</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>8.41</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>734</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-21.50</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>735</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>7.22</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>sal</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>temp</td>
+      <td>-26.00</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-18.50</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>751</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>2.19</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>temp</td>
+      <td>-16.00</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>752</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>41.60</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>1.46</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.21</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>837</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>22.50</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>844</td>
+      <td>roe</td>
+      <td>rad</td>
+      <td>11.25</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;visited&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>site</th>
+      <th>dated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>619</td>
+      <td>DR-1</td>
+      <td>1927-02-08</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>622</td>
+      <td>DR-1</td>
+      <td>1927-02-10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>734</td>
+      <td>DR-3</td>
+      <td>1930-01-07</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>735</td>
+      <td>DR-3</td>
+      <td>1930-01-12</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>751</td>
+      <td>DR-3</td>
+      <td>1930-02-26</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>752</td>
+      <td>DR-3</td>
+      <td>NaT</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>837</td>
+      <td>MSK-4</td>
+      <td>1932-01-14</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>844</td>
+      <td>DR-1</td>
+      <td>1932-03-22</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="asking-questions-on-data">
+<h2>Asking questions on data<a class="headerlink" href="#asking-questions-on-data" title="Permalink to this headline">#</a></h2>
+<section id="selecting-a-column-series">
+<h3>Selecting a column (series)<a class="headerlink" href="#selecting-a-column-series" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">][</span><span class="s1">&#39;family&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        Dyer
+1     Pabodie
+2        Lake
+3     Roerich
+4    Danforth
+Name: family, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="as-a-dataframe">
+<h3>as a dataframe<a class="headerlink" href="#as-a-dataframe" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">][[</span><span class="s1">&#39;family&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>family</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Dyer</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pabodie</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Lake</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Roerich</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Danforth</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="multiple-columns">
+<h3>multiple columns<a class="headerlink" href="#multiple-columns" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">][[</span><span class="s1">&#39;personal&#39;</span><span class="p">,</span> <span class="s1">&#39;family&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>personal</th>
+      <th>family</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>William</td>
+      <td>Dyer</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Frank</td>
+      <td>Pabodie</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Anderson</td>
+      <td>Lake</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Valentina</td>
+      <td>Roerich</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Frank</td>
+      <td>Danforth</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>taken</th>
+      <th>person</th>
+      <th>quant</th>
+      <th>reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>9.82</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>7.80</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>8.41</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>734</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-21.50</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>735</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>7.22</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>sal</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>temp</td>
+      <td>-26.00</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-18.50</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>751</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>2.19</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>temp</td>
+      <td>-16.00</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>752</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>41.60</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>1.46</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.21</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>837</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>22.50</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>844</td>
+      <td>roe</td>
+      <td>rad</td>
+      <td>11.25</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="unique-values">
+<h3>Unique values<a class="headerlink" href="#unique-values" title="Permalink to this headline">#</a></h3>
+<p>What type of measurement do we have? Unique names</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      rad
+1      sal
+2      rad
+3      sal
+4      rad
+5      sal
+6     temp
+7      rad
+8      sal
+9     temp
+10     rad
+11    temp
+12     sal
+13     rad
+14     sal
+15    temp
+16     sal
+17     rad
+18     sal
+19     sal
+20     rad
+Name: quant, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;rad&#39;, &#39;sal&#39;, &#39;temp&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;rad&#39;, &#39;sal&#39;, &#39;temp&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>How many times to the values appear?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sal     9
+rad     8
+temp    4
+Name: quant, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sorting-values">
+<h2>Sorting values<a class="headerlink" href="#sorting-values" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>personal</th>
+      <th>family</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>dyer</td>
+      <td>William</td>
+      <td>Dyer</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>pb</td>
+      <td>Frank</td>
+      <td>Pabodie</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>lake</td>
+      <td>Anderson</td>
+      <td>Lake</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>roe</td>
+      <td>Valentina</td>
+      <td>Roerich</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>danforth</td>
+      <td>Frank</td>
+      <td>Danforth</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="sort-on-elements-in-a-column">
+<h3>Sort on elements in a column<a class="headerlink" href="#sort-on-elements-in-a-column" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;personal&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>personal</th>
+      <th>family</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>lake</td>
+      <td>Anderson</td>
+      <td>Lake</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>pb</td>
+      <td>Frank</td>
+      <td>Pabodie</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>danforth</td>
+      <td>Frank</td>
+      <td>Danforth</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>roe</td>
+      <td>Valentina</td>
+      <td>Roerich</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>dyer</td>
+      <td>William</td>
+      <td>Dyer</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="sorting-on-multiple-columns-in-priority-order">
+<h3>Sorting on multiple columns in priority order<a class="headerlink" href="#sorting-on-multiple-columns-in-priority-order" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;personal&#39;</span><span class="p">,</span> <span class="s1">&#39;family&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>personal</th>
+      <th>family</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>lake</td>
+      <td>Anderson</td>
+      <td>Lake</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>danforth</td>
+      <td>Frank</td>
+      <td>Danforth</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>pb</td>
+      <td>Frank</td>
+      <td>Pabodie</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>roe</td>
+      <td>Valentina</td>
+      <td>Roerich</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>dyer</td>
+      <td>William</td>
+      <td>Dyer</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="filtering">
+<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>lat</th>
+      <th>long</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DR-1</td>
+      <td>-49.85</td>
+      <td>-128.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DR-3</td>
+      <td>-47.15</td>
+      <td>-126.72</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MSK-4</td>
+      <td>-48.87</td>
+      <td>-123.40</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;DR-1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     True
+1    False
+2    False
+Name: name, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;DR-1&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>lat</th>
+      <th>long</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DR-1</td>
+      <td>-49.85</td>
+      <td>-128.57</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="logical-operations">
+<h3>Logical operations<a class="headerlink" href="#logical-operations" title="Permalink to this headline">#</a></h3>
+<p>Use a logical OR operation (in Pandas this is |, the AND operation is &amp;)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][(</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;DR-1&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;DR-3&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>lat</th>
+      <th>long</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DR-1</td>
+      <td>-49.85</td>
+      <td>-128.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DR-3</td>
+      <td>-47.15</td>
+      <td>-126.72</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Filter all rows where name starts with ‘DR-’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;DR-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     True
+1     True
+2    False
+Name: name, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;DR-&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>lat</th>
+      <th>long</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DR-1</td>
+      <td>-49.85</td>
+      <td>-128.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DR-3</td>
+      <td>-47.15</td>
+      <td>-126.72</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Exercise: write an expression that returns rows where sal is outsite the range [0, 1]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>taken</th>
+      <th>person</th>
+      <th>quant</th>
+      <th>reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>9.82</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>7.80</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>8.41</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>734</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-21.50</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>735</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>7.22</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>sal</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>temp</td>
+      <td>-26.00</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-18.50</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>751</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>2.19</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>temp</td>
+      <td>-16.00</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>752</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>41.60</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>1.46</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.21</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>837</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>22.50</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>844</td>
+      <td>roe</td>
+      <td>rad</td>
+      <td>11.25</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt1</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;sal&#39;</span><span class="p">][</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1     False
+3     False
+5     False
+8     False
+12    False
+14    False
+16     True
+18    False
+19     True
+Name: reading, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>We may be expecting the following output with <code class="docutils literal notranslate"><span class="pre">dfs['survey'][gt1]</span></code> but this did not work as expected. This array does not have all the indixes from the original dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dfs[&#39;survey&#39;][gt1] does not work</span>
+<span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span> <span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>taken</th>
+      <th>person</th>
+      <th>quant</th>
+      <th>reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16</th>
+      <td>752</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>41.6</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>837</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>22.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>One would rather filter them simultaneously</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][(</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;sal&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>taken</th>
+      <th>person</th>
+      <th>quant</th>
+      <th>reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16</th>
+      <td>752</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>41.6</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>837</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>22.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="transforming-and-adding-data">
+<h2>Transforming and adding data<a class="headerlink" href="#transforming-and-adding-data" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;temp&#39;</span><span class="p">][</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6    -21.5
+9    -26.0
+11   -18.5
+15   -16.0
+Name: reading, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;temp&#39;</span><span class="p">][</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6     -6.7
+9    -14.8
+11    -1.3
+15     3.2
+Name: reading, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;temp_F&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;quant&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;temp&#39;</span><span class="p">][</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>taken</th>
+      <th>person</th>
+      <th>quant</th>
+      <th>reading</th>
+      <th>temp_F</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>9.82</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>619</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.13</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>rad</td>
+      <td>7.80</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>622</td>
+      <td>dyer</td>
+      <td>sal</td>
+      <td>0.09</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>8.41</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>734</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.05</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>734</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-21.50</td>
+      <td>-6.7</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>735</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>7.22</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>sal</td>
+      <td>0.06</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>735</td>
+      <td>NaN</td>
+      <td>temp</td>
+      <td>-26.00</td>
+      <td>-14.8</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>rad</td>
+      <td>4.35</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>751</td>
+      <td>pb</td>
+      <td>temp</td>
+      <td>-18.50</td>
+      <td>-1.3</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>751</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.10</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>2.19</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.09</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>752</td>
+      <td>lake</td>
+      <td>temp</td>
+      <td>-16.00</td>
+      <td>3.2</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>752</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>41.60</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>rad</td>
+      <td>1.46</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>837</td>
+      <td>lake</td>
+      <td>sal</td>
+      <td>0.21</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>837</td>
+      <td>roe</td>
+      <td>sal</td>
+      <td>22.50</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>844</td>
+      <td>roe</td>
+      <td>rad</td>
+      <td>11.25</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Group by operations: what is the average value measure per quantity and person?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">][</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      9.82
+1      0.13
+2      7.80
+3      0.09
+4      8.41
+5      0.05
+6    -21.50
+7      7.22
+8      0.06
+9    -26.00
+10     4.35
+11   -18.50
+12     0.10
+13     2.19
+14     0.09
+15   -16.00
+16    41.60
+17     1.46
+18     0.21
+19    22.50
+20    11.25
+Name: reading, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;quant&#39;</span><span class="p">)[</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>quant
+rad      6.562500
+sal      7.203333
+temp   -20.500000
+Name: reading, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;survey&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;person&#39;</span><span class="p">,</span> <span class="s1">&#39;quant&#39;</span><span class="p">])[</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>person  quant
+dyer    rad       8.8100
+        sal       0.1100
+lake    rad       1.8250
+        sal       0.1125
+        temp    -16.0000
+pb      rad       6.6600
+        temp    -20.0000
+roe     rad      11.2500
+        sal      32.0500
+Name: reading, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

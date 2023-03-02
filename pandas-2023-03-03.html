@@ -1,0 +1,921 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Pandas &#8212; BB1000 notes 2023</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">BB1000 notes 2023</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Notes 2023
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2013-01-18.html">
+   Notes 2013-01-18
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2013-01-23.html">
+   Notes 2013-01-23
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-01-26.html">
+   Notes 2023-01-26
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-01-31.html">
+   Notes 2023-01-31
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-03.html">
+   Notes 2023-02-03
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-08.html">
+   Notes 2023-02-08
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-09.html">
+   Notes 2023-02-09
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-15.html">
+   Notes 2013-02-15
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-16.html">
+   Notes 2023-02-16
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-22.html">
+   Notes 2023-02-22
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-02-23.html">
+   Notes 2023-02-23
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-03-01.html">
+   Notes 2023-01-03
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes-2023-03-02.html">
+   Notes 2023-03-02
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/bb1000/notes-2023/master?urlpath=tree/pandas-2023-03-03.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bb1000/notes-2023"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bb1000/notes-2023/issues/new?title=Issue%20on%20page%20%2Fpandas-2023-03-03.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/pandas-2023-03-03.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stocks">
+   Stocks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#movie-database">
+   Movie database
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Pandas</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stocks">
+   Stocks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#movie-database">
+   Movie database
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p>Before you turn this problem in, make sure everything runs as expected. First, <strong>restart the kernel</strong> (in the menubar, select Kernel<span class="math notranslate nohighlight">\(\rightarrow\)</span>Restart) and then <strong>run all cells</strong> (in the menubar, select Cell<span class="math notranslate nohighlight">\(\rightarrow\)</span>Run All).</p>
+<p>Make sure you fill in any place that says <code class="docutils literal notranslate"><span class="pre">YOUR</span> <span class="pre">CODE</span> <span class="pre">HERE</span></code> or “YOUR ANSWER HERE”, as well as your name and collaborators below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="pandas">
+<h1>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">HTML</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="stocks">
+<h2>Stocks<a class="headerlink" href="#stocks" title="Permalink to this headline">#</a></h2>
+<p>Update the <code class="docutils literal notranslate"><span class="pre">read_findata</span></code> function so that a csv file is read into a dataframe with the index is set to the date and the dollar amounts are transformed to floats.</p>
+<p>Hint: consider options <code class="docutils literal notranslate"><span class="pre">parse_dates</span></code> and the Series method <code class="docutils literal notranslate"><span class="pre">str.replace</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_findata</span><span class="p">(</span><span class="n">csv_file</span><span class="p">):</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="c1">################</span>
+    
+<span class="n">read_findata</span><span class="p">(</span><span class="s1">&#39;amazon.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+    <span class="n">read_findata</span><span class="p">(</span><span class="s1">&#39;amazon.csv&#39;</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block after function definition on line 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head amazon.csv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date,Close/Last,Volume,Open,High,Low
+
+02/07/2023,$102.11,119501300,$101.17,$102.41,$98.08
+
+02/06/2023,$102.18,81945200,$102.925,$103.9484,$100.65
+
+02/03/2023,$103.39,144374800,$105.26,$108.78,$102.52
+
+02/02/2023,$112.91,158154200,$110.245,$114,$108.88
+
+02/01/2023,$105.15,80450120,$102.53,$106.24,$101.24
+
+01/31/2023,$103.13,66527250,$101.155,$103.3484,$101.14
+
+01/30/2023,$100.55,70691860,$101.09,$101.74,$99.01
+
+01/27/2023,$102.24,87775610,$99.53,$103.485,$99.53
+
+01/26/2023,$99.22,68523560,$98.235,$99.49,$96.92
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">read_findata</span><span class="p">(</span><span class="s1">&#39;amazon.csv&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2013-02-08&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">77581560</span>
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2013-02-14&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">13.27</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Select the high and low columns and try to reproduce an image like this with title and ylabel defined as in figure:</p>
+<p><img alt="image-2.png" src="attachment:image-2.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_high_low</span><span class="p">(</span><span class="n">csv_file</span><span class="p">):</span>
+<span class="c1"># YOUR CODE HERE</span>
+<span class="c1">################</span>
+
+<span class="n">plot_high_low</span><span class="p">(</span><span class="s1">&#39;amazon.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">plot_high_low</span><span class="p">(</span><span class="s1">&#39;amazon.csv&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">ax</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;amazon.csv&#39;</span>
+<span class="k">assert</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylabel</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;$/share&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="movie-database">
+<h2>Movie database<a class="headerlink" href="#movie-database" title="Permalink to this headline">#</a></h2>
+<p>In this section we are going to read from a movie database into pandas. There is some setup required for this</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Goto http://www.omdbapi.com
+Click API Key
+Select FREE and enter your email
+</pre></div>
+</div>
+<p>You will get a personal code in your mailbox, replace your personal key with the one below ina file <a class="reference external" href="http://omdb.py">omdb.py</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># omdb.py
+APIKEY = &#39;xxxxxx&#39;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">omdb</span> <span class="kn">import</span> <span class="n">APIKEY</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">APIKEY</span> <span class="o">=</span> <span class="s1">&#39;6024bbe6&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">APIKEY</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;6024bbe6&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Consider the following function, it takes a search term calls the requests library (get) which and returns a dictionary object looking will all matches</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; search_omdb(&#39;tarzan&#39;)
+{&#39;Search&#39;: [{&#39;Title&#39;: &#39;Tarzan&#39;,
+&#39;Year&#39;: &#39;1999&#39;,
+&#39;imdbID&#39;: &#39;tt0120855&#39;,
+&#39;Type&#39;: &#39;movie&#39;,
+...
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">search_omdb</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://www.omdbapi.com/?apikey=</span><span class="si">{</span><span class="n">APIKEY</span><span class="si">}</span><span class="s1">&amp;s=</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+       <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">search_omdb</span><span class="p">(</span><span class="s1">&#39;tarzan&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Search&#39;: [{&#39;Title&#39;: &#39;Tarzan&#39;,
+   &#39;Year&#39;: &#39;1999&#39;,
+   &#39;imdbID&#39;: &#39;tt0120855&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BY2ZiYWUxN2ItYmQxZi00NDlkLWE2NDAtOTNmYTg1MDI0NDk1XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;The Legend of Tarzan&#39;,
+   &#39;Year&#39;: &#39;2016&#39;,
+   &#39;imdbID&#39;: &#39;tt0918940&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMzY3OTI0OTcyMF5BMl5BanBnXkFtZTgwNjkxNTAwOTE@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Greystoke: The Legend of Tarzan, Lord of the Apes&#39;,
+   &#39;Year&#39;: &#39;1984&#39;,
+   &#39;imdbID&#39;: &#39;tt0087365&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BM2NmYjZjOGItYTQ0ZC00YjcyLTk3MWUtYzdmZjY1MGNkMDViXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Tarzan&#39;,
+   &#39;Year&#39;: &#39;2013&#39;,
+   &#39;imdbID&#39;: &#39;tt1705952&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTQyODEwMTM2Nl5BMl5BanBnXkFtZTgwMTg1MTA3MDE@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Tarzan 2: The Legend Begins&#39;,
+   &#39;Year&#39;: &#39;2005&#39;,
+   &#39;imdbID&#39;: &#39;tt0437503&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BODUwZWRkMzAtYzFhMS00MGU5LWJhNDQtNzI2NGQ1NDA3NTBiXkEyXkFqcGdeQXVyODc5NjY4MzU@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Tarzan the Ape Man&#39;,
+   &#39;Year&#39;: &#39;1932&#39;,
+   &#39;imdbID&#39;: &#39;tt0023551&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BNTVlMDAwMDQtMTEzMC00YjhlLWEyYTctNjMzN2M0NGI0MTEwXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Tarzan the Ape Man&#39;,
+   &#39;Year&#39;: &#39;1981&#39;,
+   &#39;imdbID&#39;: &#39;tt0083170&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BZGU5ZTUyZmMtZjExYy00MDAzLTljZTEtMGE0MWI5YWFiYTJkXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Tarzan &amp; Jane&#39;,
+   &#39;Year&#39;: &#39;2002&#39;,
+   &#39;imdbID&#39;: &#39;tt0313680&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMjAwMTM5NzM4OF5BMl5BanBnXkFtZTcwOTE2NDkyMQ@@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Tarzan and His Mate&#39;,
+   &#39;Year&#39;: &#39;1934&#39;,
+   &#39;imdbID&#39;: &#39;tt0025862&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BNmQ4OWJhY2MtNWUzZi00YjcwLThhNmEtMWU0YWQzNDEzNDcxXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg&#39;},
+  {&#39;Title&#39;: &#39;Tarzan Finds a Son!&#39;,
+   &#39;Year&#39;: &#39;1939&#39;,
+   &#39;imdbID&#39;: &#39;tt0032007&#39;,
+   &#39;Type&#39;: &#39;movie&#39;,
+   &#39;Poster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMGU5MDdhYzktYjUyNi00YjYyLThjNDMtNjRjYmE4NjJlNzYwXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg&#39;}],
+ &#39;totalResults&#39;: &#39;173&#39;,
+ &#39;Response&#39;: &#39;True&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">search_omdb</span><span class="p">(</span><span class="s1">&#39;hamlet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;Search&#39;, &#39;totalResults&#39;, &#39;Response&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Search&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>imdbID</th>
+      <th>Type</th>
+      <th>Poster</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Hamlet</td>
+      <td>1996</td>
+      <td>tt0116477</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BM2U5OW...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Hamlet</td>
+      <td>1990</td>
+      <td>tt0099726</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BMjI5OT...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hamlet</td>
+      <td>1948</td>
+      <td>tt0040416</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BMTQ5MT...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Hamlet 2</td>
+      <td>2008</td>
+      <td>tt1104733</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BNDQyNj...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Hamlet</td>
+      <td>2000</td>
+      <td>tt0171359</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BZTA0MW...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Hamlet</td>
+      <td>2009</td>
+      <td>tt1449175</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BMTM0MT...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Hamlet</td>
+      <td>1964</td>
+      <td>tt0058126</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BZTExMT...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Hamlet</td>
+      <td>2015</td>
+      <td>tt4476736</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BMmNmOT...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Hamlet Goes Business</td>
+      <td>1987</td>
+      <td>tt0093139</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BY2U1MW...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Hamlet</td>
+      <td>1969</td>
+      <td>tt0064400</td>
+      <td>movie</td>
+      <td>https://m.media-amazon.com/images/M/MV5BZmE5OG...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>3. Write a function that wraps the previous function search_omdb, and that returns</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* a dataframe
+* has rows sorted by year
+* and the imdbID field as index
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_movies</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">search_omdb</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;Search&#39;</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+        <span class="c1"># YOUR CODE HERE</span>
+        <span class="c1">################</span>
+    
+<span class="n">get_movies</span><span class="p">(</span><span class="s1">&#39;hamlet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span> <span class="o">=</span> <span class="n">get_movies</span><span class="p">(</span><span class="s1">&#39;hamlet&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;Poster&#39;</span><span class="p">,</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">}</span>
+<span class="k">assert</span> <span class="n">movies</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;imdbID&#39;</span>
+<span class="k">assert</span> <span class="n">movies</span><span class="o">.</span><span class="n">Title</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;hamlet&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">movies</span><span class="o">.</span><span class="n">Year</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1948&#39;</span>  <span class="c1"># checks the year value of the first row</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>4. Display posters</strong></p>
+<p>Given that the Image function can be used to display an image url</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span>
+<span class="n">Image</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://m.media-amazon.com/images/M/MV5BY2ZiYWUxN2ItYmQxZi00NDlkLWE2NDAtOTNmYTg1MDI0NDk1XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://m.media-amazon.com/images/M/MV5BY2ZiYWUxN2ItYmQxZi00NDlkLWE2NDAtOTNmYTg1MDI0NDk1XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"/></div></div>
+</div>
+<ul class="simple">
+<li><p>write a function <code class="docutils literal notranslate"><span class="pre">display_postors</span></code> that takes a search term, calls get_movies and displays the posters that match the title</p></li>
+<li><p>use the pandas dataframe method <code class="docutils literal notranslate"><span class="pre">iterrows</span></code> to loop over the rows of a data frame</p></li>
+</ul>
+<p>The expected result should be something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display_posters</span><span class="p">(</span><span class="s1">&#39;gone with the wind&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>#<span class="xref myst">image.png</span>
+<img src="attachment:image.png" style="float:left"></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">display_posters</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+    <span class="n">movies</span> <span class="o">=</span> <span class="n">get_movies</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">movies</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># YOUR CODE HERE</span>
+        <span class="c1">################</span>
+   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_posters</span><span class="p">(</span><span class="s1">&#39;gone with the wind&#39;</span><span class="p">)</span>      
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Olav Vahtras<br/>
+  
+      &copy; Copyright Olav Vahtras.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
