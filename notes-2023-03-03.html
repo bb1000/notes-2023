@@ -647,7 +647,7 @@ def test_xxx()
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spend in slow 1.0014081001281738
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spend in slow 1.0013782978057861
 </pre></div>
 </div>
 </div>
@@ -685,7 +685,7 @@ def test_xxx()
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spent in slow 1.0011184215545654
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spent in slow 1.001105785369873
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
@@ -700,7 +700,7 @@ def test_xxx()
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spent in slow 1.0013413429260254
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spent in slow 1.0001907348632812
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.0
@@ -715,7 +715,7 @@ def test_xxx()
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spent in slow 1.0011427402496338
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time spent in slow 1.0009441375732422
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
@@ -804,7 +804,7 @@ say returns Hello,Joe
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>say called with (&#39;Hello&#39;, &#39;Joe&#39;) {}
 say returns Hello,Joe
-Time spent in wrapper 0.0001480579376220703
+Time spent in wrapper 4.482269287109375e-05
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello,Joe&#39;
@@ -812,6 +812,9 @@ Time spent in wrapper 0.0001480579376220703
 </div>
 </div>
 </div>
+<p>Note the</p>
+<p><code>Time spent in <span style="color: red;">wrapper</red></code></p>
+<p>output. Not useful information - <code class="docutils literal notranslate"><span class="pre">functools.wraps</span></code> to the rescue</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
@@ -837,7 +840,7 @@ Time spent in wrapper 0.0001480579376220703
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>say called with (&#39;Hello&#39;, &#39;Joe&#39;) {}
 say returns Hello,Joe
-Time spent in say 0.00015592575073242188
+Time spent in say 4.887580871582031e-05
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello,Joe&#39;
@@ -1113,6 +1116,7 @@ c
 </div>
 </div>
 </div>
+<p>oops unexpecteced behaviour, implementation must be improved</p>
 </section>
 </section>
 
